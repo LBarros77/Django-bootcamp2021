@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<img style="width: 500px; height:150px;" src="{% static 'images/WebServer.png' %}" alt="">
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for project in projects %}
+            <tr>
+                <td><a href="{% url 'project_page' project.id %}">{{project.title}}</a></td>
+                <td></td>
+                <!-- <td><a href="{% url 'update_project' project.id %}">Edit</a></td>
+                <td><a href="{% url 'delete_project' project.id %}">Delete</a></td> -->
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
