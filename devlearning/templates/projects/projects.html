@@ -16,8 +16,8 @@
             <tr>
                 <td><a href="{% url 'project_page' project.id %}">{{project.title}}</a></td>
                 <td></td>
-                <!-- <td><a href="{% url 'update_project' project.id %}">Edit</a></td>
-                <td><a href="{% url 'delete_project' project.id %}">Delete</a></td> -->
+                <td><a href="{% url 'update_project' project.id %}">Edit</a></td>
+                <td><a href="{% url 'delete_project' project.id %}">Delete</a></td>
             </tr>
         {% endfor %}
     </tbody>
